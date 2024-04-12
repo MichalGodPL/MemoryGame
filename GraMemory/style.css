@@ -1,0 +1,103 @@
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+body {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+
+    background-color: #e5e5e5;
+
+}
+
+.memory-game {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    width: 400px;
+
+    height: 400px;
+
+    margin: 0 auto;
+
+    border: 5px solid #fca311;
+
+    border-radius: 130px;
+
+    padding: 50px; 
+
+}
+
+.memory-card {
+
+    background-color: white;
+
+    width: calc(20%); 
+
+    height: calc(20%); 
+    position: relative;
+
+    margin: 1px; 
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    visibility: visible;
+
+    border-radius: 35px;
+
+    transition: transform 0.3s ease;
+
+    transform-style: preserve-3d;
+
+}
+
+.memory-card:hover {
+
+    transform: scale(1.1);
+
+}
+
+.memory-card.flipped {
+    
+    transform: rotateY(180deg); 
+}
+
+.memory-card.matched {
+
+    visibility: hidden;
+
+}
+
+.face-down > span {
+
+    visibility: hidden;
+
+}
+
+.memory-card.flipped > span {
+
+    visibility: visible;
+
+}
